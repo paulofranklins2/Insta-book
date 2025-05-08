@@ -18,6 +18,10 @@ public class Employee {
         this.hoursWorked = hoursWorked;
     }
 
+    public double getStartTime(){
+        return this.startTime;
+    }
+
     public String getEmployeeId() {
         return employeeId;
     }
@@ -62,20 +66,9 @@ public class Employee {
         return hoursWorked <= 40 ? hoursWorked : 40;
     }
 
-    /*
-    ternary statement is used for short if / else statement that need to become a value
-    so for example:
-    double price = 0;
-    if(blabla.equals("blabla") {
-      price = 6;
-    } else {
-      price = 8;
-    }
 
-    can be written as >>>>>> double price = blabla.equals("blabla") ? 6 : 8;
-     */
     public double getOvertimeHours() {
-        return hoursWorked > 40 ? hoursWorked - 40 : 0; // condition ? value if true : value if false
+        return hoursWorked > 40 ? hoursWorked - 40 : 0;
     }
 
     public double getTotalPay() {
